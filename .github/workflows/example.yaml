@@ -1,0 +1,17 @@
+name: Example
+
+on:
+  workflow_dispatch:
+    inputs:
+      client_id:
+        description: 'The app client id'
+        required: true
+        default: 'some default value'
+
+jobs:
+  build:
+    name: example job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: echo Hello agilebits!
